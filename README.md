@@ -29,13 +29,13 @@ Feel free to rip, mix and burn it.
 
 ## Installation
 
-# Put the code somewhere on a web server
-# Import the .sql database file
-# Enter the admin area @ <your url>/admin
-# The default login for the admin is: XXX/XXX
-# Change the default login credentials
-# Set up your survey in the admin
-# Profit
+* Put the code somewhere on a web server
+* Import the .sql database file
+* Enter the admin area @ <your url>/admin
+* The default login for the admin is: XXX/XXX
+* Change the default login credentials
+* Set up your survey in the admin
+* Profit
 
 
 ## Templating
