@@ -7,7 +7,7 @@ The CMS features a creepy web based backend admin area to enter your questions a
 
 ## Licence
 
-MIT
+[MIT License](http://opensource.org/licenses/mit-license.php)
 
 
 ## System Requirements
