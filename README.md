@@ -5,6 +5,14 @@ We have built this simple little survey management tool for the [»Coders´ Surv
 The CMS features a creepy web based backend admin area to enter your questions and generate results. It is the result of playing around with some new PHP 5.4 features (namely traits).
 
 
+# The Coders' Survey
+
+We have built this simple little survey CMS for the [»Coders´ Survey«](http://coders-survey.com). It's a simple multiple choice poll tool. Your questions can be answered eather with checkboxes or radios.
+
+The CMS features a creepy web based backend admin area to enter your questions and generate results.
+>>>>>>> 72c4236695001333762a46d9b61096a223658f2f
+
+
 ## Licence
 
 MIT
@@ -49,7 +57,6 @@ Sorry, there is no empty skin. Modify the existing one:
 ## Configuration
 
 Rename the file "config.php.example" to "config.php" and replace the dummy values with your MySQL access credentials.
-
 
 ### Using the Admin Area
 
