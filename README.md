@@ -27,16 +27,16 @@ The CMS features a creepy web based backend admin area to enter your questions a
 
 ## Installation
 
-# Download archive / clone git
-# Install Slim framework via composer (`cd your-project-dir; composer.phar install`)
-# Upload to your webserver
-# Import the database.sql into your MySQL database
-# Go to http://your-host/admin
-# The default admin credentials are:
-#* User: admin
-#* Password: admin
-# Change the default login credentials
-# Create pages, topics and options
+1. Download archive / clone git
+1. Install Slim framework via composer (`cd your-project-dir; composer.phar install`)
+1. Upload to your webserver
+1. Import the database.sql into your MySQL database
+1. Go to http://your-host/admin
+1. The default admin credentials are:
+1.* User: admin
+1.* Password: admin
+1. Change the default login credentials
+1. Create pages, topics and options
 
 
 ## Templating, Styling
