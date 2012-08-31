@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Database Access
+ **/
+define( 'SURVEY_DB_DNS', 'mysql:dbname=the-database;host=the-hostname' );
+define( 'SURVEY_DB_USER', 'user-name' );
+define( 'SURVEY_DB_PASSWORD', 'xxxpassword' );
+
+/**
+ * Misc
+ **/
+define( 'SURVEY_TITLE', 'MySurvey' );
+define( 'SURVEY_MAX_PER_IP', 5 );
+define( 'SURVEY_IP_TIMEFRAME_SEC', 86400 );
+define( 'SURVEY_DISGUISE_USER_IP', true );

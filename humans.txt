@@ -1,0 +1,19 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Frank Lämmer
+  Site: http://franklaemmer.de
+  Twitter: twitter.com/esher
+  Location: Berlin
+  
+  Ulrich Kautz
+  Site: http://blog.foaa.de
+  Twitter: twitter.com/ukautz
+  Location: Berlin
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Slim Framework, Composerm, jQuery
+  Software: Sublime Text
