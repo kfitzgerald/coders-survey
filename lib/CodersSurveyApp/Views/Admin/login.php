@@ -5,7 +5,7 @@ $app->render( 'Snippets/header.php' );
 $app->render( 'Snippets/admin_header.php' );
 ?>
 	<article class="active">
-		<form method="post" action="/admin">
+		<form method="post" action="/pregzilla/polls/admin">
 			<h1>
 				Please Login before Admin
 			</h1>

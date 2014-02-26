@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
+	<!-- base href="http://luciana.and.kevinfitzgerald.net/pregzilla/polls/" -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -11,19 +12,18 @@
 
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/pregzilla/polls/css/style.css">
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="/pregzilla/polls/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-	<script src="js/libs/bootstrap.min.js"></script>
+	<script src="/pregzilla/polls/js/libs/bootstrap.min.js"></script>
 
-	<link rel="canonical" href="http://coders-survey.com"/>
-	<link href="/img/favicon.png" rel="icon" type="image/x-icon">
+	<link href="/pregzilla/polls/img/favicon.png" rel="icon" type="image/x-icon">
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<script>window.html5 || document.write('<script src="js/libs/html5.js"><\/script>')</script>
+	<script>window.html5 || document.write('<script src="/pregzilla/polls/js/libs/html5.js"><\/script>')</script>
 	<![endif]-->
 </head>
 <body>
@@ -32,7 +32,7 @@
 
 	<header>
 		<h1>
-			Coders´ <b>Survey</b>
+			Pregzilla <b>Survey</b>
 		</h1>
 
 		<ul>

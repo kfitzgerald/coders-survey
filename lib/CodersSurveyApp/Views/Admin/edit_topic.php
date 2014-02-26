@@ -14,9 +14,9 @@ $app->render( 'Snippets/admin_nav.php' );
 			<?php } ?>
 		</h1>
 		<p>
-			<a href="/admin/page/<?= $survey_topic[ 'parent_id' ] ?>">‹ Back</a>
+			<a href="/pregzilla/polls/admin/page/<?= $survey_topic[ 'parent_id' ] ?>">‹ Back</a>
 		</p>
-		<form method="post" action="/admin/topic/<?= $survey_topic[ 'id' ] ?>">
+		<form method="post" action="/pregzilla/polls/admin/topic/<?= $survey_topic[ 'id' ] ?>">
 			<div class="qgroup">
 				<h3>
 					Title
@@ -87,7 +87,7 @@ $app->render( 'Snippets/admin_nav.php' );
 				</label>
 				<?php } ?>
 			</div>
-			<script type="text/javascript" src="/js/jquery.ui-admin.js"></script>
+			<script type="text/javascript" src="/pregzilla/polls/js/jquery.ui-admin.js"></script>
 			<script type="text/javascript">
 			$( function() {
 				$( $( 'label.x-new-option' ).hide().get(0) ).show();

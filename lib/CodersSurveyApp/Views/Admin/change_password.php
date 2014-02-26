@@ -5,7 +5,7 @@ $app->render( 'Snippets/admin_header.php' );
 $app->render( 'Snippets/admin_nav.php' );
 ?>
 	<article class="active">
-		<form method="post" action="/admin/change-password">
+		<form method="post" action="/pregzilla/polls/admin/change-password">
 			<h3>
 				Username
 			</h3>

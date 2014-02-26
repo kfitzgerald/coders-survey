@@ -72,7 +72,7 @@ class Admin extends _Controller {
 			else {
 				$this->a()->flash( 'error', 'Login failed' );
 			}
-			return  $this->a()->redirect('/admin');
+			return  $this->a()->redirect('/pregzilla/polls/admin');
 		}
 		
 		if ( $this->check() ) {
@@ -100,7 +100,7 @@ class Admin extends _Controller {
 				'INSERT INTO survey_config ( stype, name, data ) VALUES ( "setting", ?, "1" )',
 				[ "closed:". $this->s()->getId() ] );
 		}
-		return  $this->a()->redirect('/admin');
+		return  $this->a()->redirect('/pregzilla/polls/admin');
 	}
 	
 	
@@ -115,11 +115,11 @@ class Admin extends _Controller {
 			$password = @trim( $_REQUEST[ 'data' ][ 'password_new' ] );
 			if ( empty( $username ) || empty( $password ) ) {
 				$this->a()->flash( 'error', 'Username and password required' );
-				return  $this->a()->redirect( '/admin/change-password' );
+				return  $this->a()->redirect( '/pregzilla/polls/admin/change-password' );
 			}
 			if ( $password != $_REQUEST[ 'data' ][ 'password_repeat' ] ) {
 				$this->a()->flash( 'error', 'Password mismatch' );
-				return  $this->a()->redirect( '/admin/change-password' );
+				return  $this->a()->redirect( '/pregzilla/polls/admin/change-password' );
 			}
 			
 			$this->s()->dbQuery(
@@ -127,7 +127,7 @@ class Admin extends _Controller {
 				[ $username, crypt( $password, '$6$'. md5( $username ). '$' ), $this->session( 'admin' ) ]
 			);
 			$this->a()->flash( 'success', 'Username and password updated' );
-			return  $this->a()->redirect( '/admin' );
+			return  $this->a()->redirect( '/pregzilla/polls/admin' );
 		}
 		
 		$surveys = $this->s()->dbFetchAll( 'survey_item', 'stype = "survey" ORDER BY title ASC', [] );
@@ -261,7 +261,7 @@ class Admin extends _Controller {
 				$this->s()->dbQuery( 'UPDATE survey_item SET position = ? WHERE id = ?', [ $new_pos, $page[ 'id' ] ] );
 		}
 		$this->a()->flash( 'success', 'Page order has been saved' );
-		$this->a()->redirect('/admin');
+		$this->a()->redirect('/pregzilla/polls/admin');
 	}
 	
 	
@@ -342,7 +342,7 @@ class Admin extends _Controller {
 		
 		$this->a()->flash( 'success', 'Page "'. htmlentities( $page[ 'title' ] )
 			. '" has been '. ( $created ? 'created' : 'saved' ) );
-		return $this->a()->redirect( '/admin' );
+		return $this->a()->redirect( '/pregzilla/polls/admin' );
 	}
 	
 	
@@ -358,7 +358,7 @@ class Admin extends _Controller {
 			$this->s()->dbQuery( 'DELETE FROM survey_item WHERE stype = "option" AND parent_id = ?', [ $topic[ 'id' ] ] );
 		}
 		$this->a()->flash( 'success', 'Page deleted' );
-		$this->a()->redirect( '/admin' );
+		$this->a()->redirect( '/pregzilla/polls/admin' );
 	}
 	
 	
@@ -487,7 +487,7 @@ class Admin extends _Controller {
 		
 		$this->a()->flash( 'success', 'Topic "'. htmlentities( $topic[ 'title' ] )
 			. '" has been '. ( $created ? 'created' : 'saved' ) );
-		return $this->a()->redirect( '/admin/page/'. $topic[ 'parent_id' ] );
+		return $this->a()->redirect( '/pregzilla/polls/admin/page/'. $topic[ 'parent_id' ] );
 	}
 	
 	
@@ -499,7 +499,7 @@ class Admin extends _Controller {
 		$this->s()->dbQuery( 'DELETE FROM survey_item WHERE stype = "topic" AND id = ?', [ $id ] );
 		$this->s()->dbQuery( 'DELETE FROM survey_item WHERE stype = "option" AND parent_id = ?', [ $id ] );
 		$this->a()->flash( 'success', 'Topic "'. htmlentities( $topic[ 'title' ] ). '" deleted' );
-		$this->a()->redirect( '/admin/page/'. $topic[ 'parent_id' ] );
+		$this->a()->redirect( '/pregzilla/polls/admin/page/'. $topic[ 'parent_id' ] );
 	}
 	
 	
@@ -519,7 +519,7 @@ class Admin extends _Controller {
 			error_log( "Error switching survey: '$e'" );
 			$this->a()->flash( 'error', 'Cannot switch to non existing survey' );
 		}
-		$this->a()->redirect('/admin');
+		$this->a()->redirect('/pregzilla/polls/admin');
 	}
 	
 	
@@ -529,6 +529,6 @@ class Admin extends _Controller {
 	public function logout() {
 		$this->session( 'admin', 0 );
 		$this->a()->flash( 'success', 'Good bye' );
-		$this->a()->redirect('/admin');
+		$this->a()->redirect('/pregzilla/polls/admin');
 	}
 }

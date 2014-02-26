@@ -16,20 +16,26 @@ $(document).ready(function() {
 
 	// 
 	$(function() {
-		var hash = window.location.hash;
-		hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+		hashChange();
+		$('nav ul a').click(function(e) { setTimeout(hashChange, 10); });
 	});
 });
 
+function hashChange() {
+	var hash = window.location.hash;
+        if (hash) {
+       		$('nav ul a[href="' + hash + '"]').tab('show');
+        	$('nav ul a[href="/pregzilla/polls/admin' + hash + '"]').tab('show');
+        }
+}
 
 
 
-
-/*  Twitter */
+/*  Twitter 
 
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
-/*  Facebook */
+/*  Facebook 
 
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,10 +46,12 @@ $(document).ready(function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-// /* google+  */
+// /* google+  
 
 (function() {
 	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 	po.src = 'https://apis.google.com/js/plusone.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 })();
+
+*/

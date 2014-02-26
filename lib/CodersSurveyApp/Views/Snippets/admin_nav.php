@@ -28,32 +28,32 @@
 		</script>
 	<?php } else { ?>
 		<li>
-			<a href="/admin#overview">
+			<a href="#overview">
 				Edit Survey
 			</a>
 		</li>
 		<li>
-			<a href="/admin#generate">
+			<a href="#generate">
 				Generate Results
 			</a>
 		</li>
 		<li>
-			<a href="/admin#results">
+			<a href="#results">
 				See Results
 			</a>
 		</li>
 		<li>
-			<a href="/admin#help">
+			<a href="#help">
 				Help
 			</a>
 		</li>
 	<?php } ?>
 	</ul>
 	<menu>
-		<a href="/admin/change-password">
+		<a href="/pregzilla/polls/admin/change-password">
 			Change Password
 		</a>
-		<a href="/logout">
+		<a href="/pregzilla/polls/logout">
 			Log Out ›
 		</a>
 	</menu>

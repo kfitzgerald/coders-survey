@@ -1,4 +1,4 @@
-<script type="text/javascript" src="/js/jquery.ui-admin.js"></script>
+<script type="text/javascript" src="/pregzilla/polls/js/jquery.ui-admin.js"></script>
 <script type="text/javascript">
 $( function() {
 	$( ".x-sortable" ).sortable( {

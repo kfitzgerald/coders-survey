@@ -13,9 +13,9 @@ $app->render( 'Snippets/admin_nav.php' );
 			<?php } ?>
 		</h1>
 		<p>
-			<a href="/admin">‹ Back</a>
+			<a href="/pregzilla/polls/admin">‹ Back</a>
 		</p>
-		<form method="post" action="/admin/page/<?= $survey_page[ 'id' ] ?>">
+		<form method="post" action="/pregzilla/polls/admin/page/<?= $survey_page[ 'id' ] ?>">
 			<h3>
 				Page Title
 			</h3>
@@ -36,15 +36,15 @@ $app->render( 'Snippets/admin_nav.php' );
 					<input type="hidden" class="x-position-value" name="data[topic][<?= $topic->getId() ?>][position]" value="<?= $position++ ?>">
 					<?= $topic->getTitle() ?>
 					<div class="btn-group">
-						<a class="btn btn-small btn-success" href="/admin/topic/<?= $topic->getId() ?>">edit</a>
-						<a class="btn btn-small btn-danger" href="/admin/topic/delete/<?= $topic->getId() ?>">delete</a>
+						<a class="btn btn-small btn-success" href="/pregzilla/polls/admin/topic/<?= $topic->getId() ?>">edit</a>
+						<a class="btn btn-small btn-danger" href="/pregzilla/polls/admin/topic/delete/<?= $topic->getId() ?>">delete</a>
 					</div>
 				</div>
 					<?php } ?>
 			</div>
 				<?php } ?>
 			<p>
-				<a class="btn btn-small" href="/admin/topic/create/<?= $page->getId() ?>">+ Create new Topic</a>
+				<a class="btn btn-small" href="/pregzilla/polls/admin/topic/create/<?= $page->getId() ?>">+ Create new Topic</a>
 			</p>
 			<?php } else { ?>
 			<input type="hidden" name="data[page][parent_id]" value="<?= $survey_page[ 'parent_id' ] ?>">

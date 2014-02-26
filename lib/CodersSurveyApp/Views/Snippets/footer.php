@@ -8,8 +8,8 @@
 		</p>
 	</footer>
 
-<script src="/js/libs/bootstrap.min.js"></script>
-<script src="/js/script-ck.js"></script>
+<script src="/pregzilla/polls/js/libs/bootstrap.min.js"></script>
+<script src="/pregzilla/polls/js/script-ck.js"></script>
 
 
 <script type="text/javascript">

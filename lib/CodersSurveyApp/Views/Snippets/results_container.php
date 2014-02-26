@@ -49,7 +49,7 @@ $( function() {
 		if ( ! $( this ).val() )
 			return $( '#x-result-out' ).empty();
 		$( '#x-result-out' ).empty().append( 'Loading..' );
-		$.get( '/load-result/'+ $( this ).val(), function( html ) {
+		$.get( '/pregzilla/polls/load-result/'+ $( this ).val(), function( html ) {
 			$( '#x-result-out' ).empty().append( html );
 		} );
 	} ).trigger( 'change' );

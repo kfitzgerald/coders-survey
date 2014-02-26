@@ -73,7 +73,7 @@ class Home extends _Controller {
 				error_log( ' -- error: '. print_r( $e, true ) );
 			}
 		}
-		$this->a()->redirect('/');
+		$this->a()->redirect('/pregzilla/polls/');
 	}
 	
 	

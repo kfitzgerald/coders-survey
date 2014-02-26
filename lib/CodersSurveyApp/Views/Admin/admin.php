@@ -5,7 +5,7 @@ $app->render( 'Snippets/admin_header.php' );
 $app->render( 'Snippets/admin_nav.php' );
 ?>
 	<article id="overview" class="active">
-		<form method="post" action="/admin/survey/togglestate">
+		<form method="post" action="/pregzilla/polls/admin/survey/togglestate">
 
 			<?/* 
 
@@ -25,7 +25,7 @@ $app->render( 'Snippets/admin_nav.php' );
 		</form>
 		
 		
-		<form method="post" action="/admin/survey/save">
+		<form method="post" action="/pregzilla/polls/admin/survey/save">
 			<h1>
 				Pages
 			</h1>
@@ -38,14 +38,14 @@ $app->render( 'Snippets/admin_nav.php' );
 					<input type="hidden" class="x-position-value" name="data[page][<?= $page->getId() ?>][position]" value="<?= $position++ ?>">
 					<?= $page->getTitle() ?>
 					<div class="btn-group">
-						<a class="btn btn-small btn-success" href="/admin/page/<?= $page->getid() ?>">edit</a>
-						<a class="btn btn-small btn-danger" href="/admin/page/delete/<?= $page->getid() ?>">delete</a>
+						<a class="btn btn-small btn-success" href="/pregzilla/polls/admin/page/<?= $page->getid() ?>">edit</a>
+						<a class="btn btn-small btn-danger" href="/pregzilla/polls/admin/page/delete/<?= $page->getid() ?>">delete</a>
 					</div>
 				</div>
 				<?php } ?>
 			</div>
 			<p>
-				<a class="btn btn-small" href="/admin/page/new">+ Create new Page</a>
+				<a class="btn btn-small" href="/pregzilla/polls/admin/page/new">+ Create new Page</a>
 			</p>
 			<div class="actions">
 				<input class="btn btn-large btn-inverse" type="submit" value="Save Pages">
@@ -57,7 +57,7 @@ $app->render( 'Snippets/admin_nav.php' );
 			Select Group Topics
 		</h1>
 		<div id="x-generate-pre">
-			<form method="post" action="/admin/survey/generate">
+			<form method="post" action="/pregzilla/polls/admin/survey/generate">
 				<?php foreach ( $survey->getAllPage() as $page ) { ?>
 				<section>
 					<h3>
@@ -110,7 +110,7 @@ $app->render( 'Snippets/admin_nav.php' );
 					$( '#x-generate-while' ).slideUp();
 					$( '#x-generate-post' ).slideDown();
 					setTimeout( function() {
-						document.location.href = '/admin?t='+ ( new Date() ).getTime()+ '#results';
+						document.location.href = '/pregzilla/polls/admin?t='+ ( new Date() ).getTime()+ '#results';
 					}, 1000 );
 				}, 'json' );
 				return false;

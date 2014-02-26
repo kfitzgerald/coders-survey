@@ -19,7 +19,7 @@ $( function() {
 } );
 </script>
 <article id="questions" class="active">
-	<form action="/complete" method="post">
+	<form action="/pregzilla/polls/complete" method="post">
 		<?php while ( $page = $survey->nextPage() ) { ?>
 		<section>
 			<h1>
